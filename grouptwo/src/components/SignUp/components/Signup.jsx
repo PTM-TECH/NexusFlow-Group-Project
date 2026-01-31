@@ -44,6 +44,7 @@ function Signup() {
         <div className="bg-white p-8 rounded shadow-md w-full max-w-sm">
           <h2 className="text-2xl font-bold mb-6 text-gray-800">Sign Up</h2>
           <form onSubmit={handleSubmit}>
+            
             {/* Email Input Field */}
             <div className="mb-4">
               <label
@@ -93,10 +94,10 @@ function Signup() {
               <input
                 type="password"
                 id="confirmPassword"
-                name="confirmPassword"
-                value={formData.confirmPassword}
+                name="confirmpassword"
+                value={formData.confirmpassword}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border rounded shadow appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border rounded shadow appearance-none focus:outline-none focus:ring-2 focus:ring-black-500"
                 required
               />
             </div>
@@ -104,7 +105,7 @@ function Signup() {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="w-full bg-green-500 hover:bg-green-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             >
               Sign Up
             </button>
