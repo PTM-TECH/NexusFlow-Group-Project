@@ -26,7 +26,7 @@ function Menu() {
           </Link>
         </li>
         <li className="hover:text-green-500 hover:text-xl active:opacity-90">
-          <a href="#">Pricing</a>
+          {/* <a href="#">Pricing</a> */}
         </li>
         <li className="hover:text-green-500 hover:text-xl active:opacity-90">
           <Link
@@ -40,7 +40,15 @@ function Menu() {
           </Link>
         </li>
         <li className="hover:text-green-500 hover:text-xl active:opacity-90">
-          <a href="#">Contact</a>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className="cursor-pointer"
+          >
+            Contact
+          </Link>
         </li>
       </ul>
     </nav>

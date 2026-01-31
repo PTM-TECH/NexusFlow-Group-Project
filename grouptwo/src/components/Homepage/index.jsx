@@ -4,6 +4,7 @@ import Navbar from "./components/NavBar/Navbar";
 import Herosection from "./components/HeroSection/Herosection";
 import Services from "./components/OurServices/Services";
 import About from "./components/AboutUs/About";
+import ContactUs from "./components/Contactus/Contact.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 
 function Homepage() {
@@ -18,6 +19,9 @@ function Homepage() {
       </Element>
       <Element name="about">
         <About />
+      </Element>
+      <Element name="contact">
+        <ContactUs />
       </Element>
       <Footer />
     </div>
