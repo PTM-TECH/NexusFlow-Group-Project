@@ -1,12 +1,12 @@
 import { ahref, chatgpt, envato, grammarly } from "../Subscription/assets";
-/**
- * productsData - A centralized array of objects.
- * Each object represents a digital product available for subscription.
- * will be easily moved to a backend API/Database in the future.
+/*
+ productsData - A centralized array of objects.
+ Each object represents a digital product available for subscription.
+ will be easily moved to a backend API/Database in the future.
  */
 export const productsData = [
   {
-    id: "chatgpt", // Unique identifier used for state tracking (e.g., in paidIds)
+    id: "chatgpt", // Unique identifier used for state tracking (in paidIds)
     name: "ChatGPT", // Display name shown on the ProductCard
     plans: [
       // Array of subscription options available for this specific product
