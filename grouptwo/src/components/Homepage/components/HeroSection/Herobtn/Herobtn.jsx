@@ -1,13 +1,24 @@
+import { useNavigate } from "react-router-dom";
 function Herobtn() {
+  const navigate = useNavigate();
   return (
     <div className="flex gap-5 mt-5">
-      <button className="bg-green-500 p-4 font-bold text-white rounded-md cursor-pointer hover:opacity-80">
+      <button
+        className="bg-green-500 p-4 font-bold text-white rounded-md cursor-pointer hover:opacity-80"
+        onClick={() => navigate("/signup")}
+      >
         GET STARTED NOW!
       </button>
-      <button className="border-2 border-green-500 bg-white pl-10 pr-10 font-bold text-gray-800 rounded-md cursor-pointer hover:border-white hover:text-white hover:bg-green-500">
+      <button
+        className="border-2 border-green-500 bg-white pl-10 pr-10 font-bold text-gray-800 rounded-md cursor-pointer hover:border-white hover:text-white hover:bg-green-500"
+        onClick={() => navigate("/signup")}
+      >
         SIGN UP FREE
       </button>
-      <button className="border-2 border-white pl-10 pr-10 font-bold text-gray-800 rounded-md hover:border-green-500 cursor-pointer">
+      <button
+        className="border-2 border-white pl-10 pr-10 font-bold text-gray-800 rounded-md hover:border-green-500 cursor-pointer"
+        onClick={() => navigate("/login")}
+      >
         LOG IN
       </button>
     </div>
