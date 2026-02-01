@@ -24,6 +24,7 @@ function App() {
         <Route path="/login" element={<Login users={users} />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/service/:name" element={<Servicedetails />} />
+        <Route path="/subscription" element={<Subscription />} />
         <Route path="*" element={<Errorpage />} />
       </Routes>
     </BrowserRouter>
