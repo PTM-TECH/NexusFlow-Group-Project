@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 
-/**
- * CheckoutSidebar Component
- * Props:
- * - isOpen: Boolean to show/hide the sidebar
- * - product: Object containing name, id, etc.
- * - plan: Object containing selected plan type and price
- * - onClose: Function to close the sidebar
- * - onPay: Function to update the main app state once payment is successful
+/*
+CheckoutSidebar Component
+ Props:
+ isOpen: Boolean to show/hide the sidebar
+ product: Object containing name, id, etc.
+ plan: Object containing selected plan type and price
+ onClose: Function to close the sidebar
+ onPay: Function to update the main app state once payment is successful
  */
 function CheckoutSidebar({ isOpen, product, plan, onClose, onPay }) {
-  // Local state to track the payment flow: 'idle' (ready), 'processing' (loading), or 'success'
+  // State to track the payment flow: 'idle' (ready), 'processing' (loading), or 'success'
   const [status, setStatus] = useState("idle");
 
   // Conditional Rendering: If sidebar isn't open, don't render anything in the DOM
@@ -21,7 +21,7 @@ function CheckoutSidebar({ isOpen, product, plan, onClose, onPay }) {
     // Step 1: Switch UI to the loading spinner
     setStatus("processing");
 
-    // Step 2: Simulate a 1.5-second delay (mimicking a bank response)
+    // Step 2: Simulate a 1.5-second delay
     setTimeout(() => {
       // Step 3: Switch UI to the success checkmark
       setStatus("success");
@@ -35,10 +35,7 @@ function CheckoutSidebar({ isOpen, product, plan, onClose, onPay }) {
   };
 
   return (
-    /* The Dark Backdrop: fixed to fill the screen, semi-transparent black, blurs the background */
     <div className="fixed inset-0 z-50 flex justify-end bg-black/40 backdrop-blur-sm">
-     {/* The White Panel: slide-in animation from the right, full height, 80px
-      wide */}
       <div className="w-80 h-full bg-white p-8 shadow-2xl flex flex-col animate-in slide-in-from-right">
         {/* CHECKOUT VIEW: Shown when status is 'idle' */}
         {status === "idle" ? (
@@ -70,7 +67,7 @@ function CheckoutSidebar({ isOpen, product, plan, onClose, onPay }) {
               </div>
             </div>
 
-            {/* Payment Button: active:scale-95 adds a "click" physical feel */}
+            {/* Payment Button */}
             <button
               onClick={handleProcessPayment}
               className="w-full py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all active:scale-95"

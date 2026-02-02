@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
-/**
- * ProductCard Component
- * Props:
- * - product: The object containing tool details (name, plans, etc.)
- * - isPaid: Boolean from App.jsx tracking if this specific tool was purchased
- * - onSelectPlan: Function that opens the sidebar with the chosen plan details
+/*
+ ProductCard Component
+ Props:
+ product: The object containing tool details (name, plans, etc.)
+ isPaid: Boolean from App.jsx tracking if this specific tool was purchased
+ onSelectPlan: Function that opens the sidebar with the chosen plan details
  */
 function ProductCard({ product, isPaid, onSelectPlan }) {
-  // Local state to toggle between showing the "View Plans" button or the list of actual plans
+  // state to toggle between showing the "View Plans" button or the list of actual plans
   const [showPlans, setShowPlans] = useState(false);
   const handleClick = () => {
     alert("Coming soon...");
@@ -19,7 +19,7 @@ function ProductCard({ product, isPaid, onSelectPlan }) {
     <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 flex flex-col ">
       <div className="flex flex-col justify-center items-center gap-2">
         <img src={product.image} alt="image" className="w-20" />
-        {/* Product Title (e.g., ChatGPT, Ahrefs) */}
+        {/* Product Title*/}
         <h2 className="text-2xl font-bold mb-6">{product.name}</h2>
       </div>
 
